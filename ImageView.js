@@ -3,7 +3,12 @@ var ImageView = Backbone.View.extend({
   id: 'ImageView',
 
   initialize: function(){
+  },
 
+  updateImage: function(model){
+    console.log('src = ' + model.get('src'));
+    this.el.querySelector('img').src = model.get('src');
+    this.el.children[1].textContent = model.get('title');
   },
 
   render: function(){

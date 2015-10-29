@@ -8,6 +8,9 @@ var FormView = Backbone.View.extend({
 
   submitForm: function(e){
     e.preventDefault();
+    this.trigger('submit', this.el.querySelector('#linkInput').value, this.el.querySelector('#titleInput').value)
+    this.el.querySelector('#linkInput').value = '';
+    this.el.querySelector('#titleInput').value = '';
   },
 
   initialize: function(){

@@ -6,15 +6,20 @@
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
 
+    <script src='AppModel.js'></script>
+    <script src='Images.js'></script>
+    <script src='ImageModel.js'></script>
+
     <script src="AppView.js"></script>
     <script src="FormView.js"></script>
     <script src="ImageListView.js"></script>
     <script src="FavoritesListView.js"></script>
     <script src="ImageView.js"></script>
+    <script src="ImageListEntryView.js"></script>
 
     <script>
       $(function() {
-        var appView = new AppView({$el: $('body')});
+        var appView = new AppView({$el: $('body'), model: new AppModel()});
       });
     </script>
   </head>
