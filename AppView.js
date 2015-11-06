@@ -9,6 +9,11 @@ var AppView = Backbone.View.extend({
     this.render();
     this.formView.on('submit', this.model.get('images').addImage, this.model.get('images'));
     this.model.get('images').on('displayMe', this.imageView.updateImage, this.imageView);
+    this.imageView.on('rateImage', this.helpFunc);
+  },
+
+  helpFunc: function(){
+    console.log('it worked?');
   },
 
   render: function(){

@@ -46,6 +46,11 @@ label {
   border: 2px solid black;
 }
 
+.heart {
+  height:15px;
+  width:15px;
+}
+
 h4 {
   margin-top: 2px;
   margin-bottom: 7px;
